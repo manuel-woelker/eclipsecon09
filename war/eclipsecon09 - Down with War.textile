@@ -1,0 +1,69 @@
+Down with WAR  - Notes
+======================
+
+= Motivation =
+
+ - Monolithic WARs
+ - hard to reconfigure or update parts
+ - hard to replace parts
+ - inflexible
+ - no included distribution mechanism
+ 
+= Status quo =
+
+Diagrams:
+ - Classical webapp stack: appserver, webapps
+ - Classical osgi webapp stack: appserver, osgi servlet bridge, osgi runtime, osgi bundles
+
+= Why p2? =
+ - established mechanisms for dependency resolution
+ - Much more general than one might think
+ - flexible
+ - automatically pulls in necessary dependencies
+ - powerful: mirroring, different protocols, proxy configuration, reusing locally cached bundles
+
+= Adding p2 to the mix (1/2) = 
+
+ Diagrams:
+ - P2 "Cold-deploy" webapp stack: (appserver, osgi servlet bridge, osgi runtime, osgi bundles) + p2 director
+
+= Cold-deploy =
+ - p2 not inside framwork
+ - but maybe in another webapp
+ - server restart after deployment
+ - very robust
+
+= Adding p2 to the mix (2/2)= 
+
+ Diagrams:
+ - P2 "Hot-deploy" webapp stack: appserver, osgi servlet bridge, osgi runtime, p2 + other osgi bundles
+ 
+= Hot-deploy =
+ - (milli.war)
+ - p2 inside framework
+ - better control of bundle life cycle
+ - good for high-availability systems (parallel operation)
+ - just stop and start bundles to update
+ - not as resilient (Permgen, thread problems)
+ - Hot-deploy aware implemetation needed in bundles
+  
+= Benefits =
+ - leveraging powerful dependency manager
+ - dependencies are resolved and added automatically
+ - incremental updates possible
+ - good for modular or flexible deployments
+ - no need for 2^n war versions
+ - sophisticated distribution mechanisms
+
+ = Caveats =
+ - long running webapp process still problematic (permgen, threads again)
+ - Tooling 
+ - bootstrapping
+ - appserver upgrades
+
+= Outlook =
+ - "Rich server platform"
+ - osgi-based appservers (e.g. Glassfish)
+ - RAP
+
+

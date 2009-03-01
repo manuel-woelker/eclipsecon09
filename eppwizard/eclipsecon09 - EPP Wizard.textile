@@ -1,0 +1,26 @@
+EPP Wizard  - Notes
+======================
+
+= Motivation =
+ - customization
+ - too many redundant bundles on the harddrive
+ - "single step eclipse installation"
+ - Share customized downloads
+ - better integration of 3rd party offerings
+
+= Demo =
+ - Customized Download
+
+= Technologies =
+ - Java
+ - Open Source
+ - Jetty
+ - OSGi
+ - RAP
+ - p2
+
+= interaction with 3rd parties =
+ - Better user experience
+   - lower frustration level
+ - Technology
+   - IUs, RepoURLs

@@ -1,0 +1,27 @@
+Yoxos OnDemand - My workbench on your desktop - Notes
+=====================================================
+
+= Problem =
+ - Eclipse BugDay
+ - Developer wants help - needs contributors
+ - low barrier of entry
+ - start hacking with a mnimum of fuzz
+
+ - Share Workspace -> create a profile
+   - Eclipse IDE: with tools in the right version
+   - Workspace: Project sources
+   - Bugtracking / Bugzilla
+   - Preferences like Formatter, Coding conventions
+
+ - Publish link to the profile
+
+ - BugDay-Contributor
+   - Download "the profile"
+   - Extract and Start
+   - start hacking
+
+ - About OnDemand
+   - Free
+   - Complete
+   - UpToDate
+
