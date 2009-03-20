@@ -15,7 +15,7 @@
 \title[Down with war!\hspace{2em}\insertframenumber/\inserttotalframenumber]{Down with war!}
 \subtitle{Server-side deployment with p2}
 
-%\date{February 14, 2008} %leave out for today's date to be insterted
+\date{March 25, 2009} %leave out for today's date to be insterted
 
 %\institute{EclipseSource}
 
@@ -24,18 +24,6 @@
 \maketitle
 
 % \section{Introduction}  % add these to see outline in slides
-
-\begin{frame}
-  \frametitle{Overview}
-  \begin{itemize}
-  \item Introduction\pause
-  \item Basic concepts\pause
-  \item Workflows\pause
-  \item Advanced features\pause
-  \item Questions and Discussion
-  \end{itemize}
-\end{frame}
-
 
 \begin{frame}
   \frametitle{Status quo: Classic web application}
@@ -68,20 +56,25 @@
   \item modular system\pause
   \item flexible\pause
   \item automatic dependency management\pause
-  \item proven mechnisms\pause
+  \item proven mechanisms\pause
   \item using existing technology
   \end{itemize}   
 \end{frame}
 
 \begin{frame}
   \frametitle{Example: Hudson Plugins}
+\begin{columns}
+\column{2in}
   \begin{itemize}
   \item more than 100 plugins\pause
   \item "proprietary" plugin system\pause
   \item hand-crafted\pause
-  \item TODO: screenshot?
   \end{itemize}   
+\column{2.5in}
+\onslide<1->\includegraphics[width=1.0\textwidth]{hudson.png}
+\end{columns}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Easier solution: p2}
@@ -104,14 +97,14 @@
 \begin{frame}
   \frametitle{P2 "Cold-deploy"}
 \begin{columns}
-\column{1.5in}
+\column{2in}
   \begin{itemize}
   \item p2 not inside framework\pause
   \item but maybe in another webapp\pause
   \item server restart after deployment\pause
   \item very robust
   \end{itemize}      
-\column{1.5in}
+\column{2.5in}
 \onslide<1->\includegraphics[width=1.0\textwidth]{diagrams/stack_svg_p2.pdf}
 \end{columns}
 \end{frame}
@@ -126,14 +119,14 @@
 \begin{frame}
   \frametitle{P2 "Hot-deploy"}
 \begin{columns}
-\column{1.5in}
+\column{2in}
   \begin{itemize}
   \item p2 inside framework\pause
   \item better control of bundle life cycle\pause
   \item good for high-availability systems\pause
   \item not as resilient (Permgen, thread problems)
   \end{itemize}      
-\column{1.5in}
+\column{2.5in}
 \onslide<1->\includegraphics[width=1.0\textwidth]{diagrams/stack_svg_p3.pdf}
 \end{columns}
 \end{frame}
